@@ -1,0 +1,21 @@
+{
+  "name": "electron-parking",
+  "version": "1.0.0",
+  "description": "Sistema de información para el manejo de parqueaderos",
+  "main": "index.js",
+  "scripts": {
+    "start": "electron index.js",
+    "test": "test"
+  },
+  "keywords": [
+    "parking",
+    "electron",
+    "indexedDB"
+  ],
+  "author": "Juan Felipe Rodríguez",
+  "license": "GPL-3.0-or-later",
+  "dependencies": {
+    "bootstrap": "^5.3.1",
+    "electron": "^25.4.0"
+  }
+}

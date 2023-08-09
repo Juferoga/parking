@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Sistema de parqueo</title>
+  <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
+  <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<body>
+  <div class="container">
+    
+    <h1>Bienvenido al sistema de parqueo</h1>
+      
+    <ul class="nav nav-tabs" id="myTab" role="tablist">
+      <li class="nav-item" role="presentation">
+        <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home-tab-pane" type="button" role="tab" aria-controls="home-tab-pane" aria-selected="true">Vehículos</button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile-tab-pane" type="button" role="tab" aria-controls="profile-tab-pane" aria-selected="false">Clientes</button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact-tab-pane" type="button" role="tab" aria-controls="contact-tab-pane" aria-selected="false">Pagos</button>
+      </li>
+    </ul>
+    <div class="tab-content" id="myTabContent">
+      <div class="tab-pane fade show active" id="home-tab-pane" role="tabpanel" aria-labelledby="home-tab" tabindex="0">
+        <!-- Sección para Vehículos -->
+        <div class="container mt-4">
+          <h2>Vehículos</h2>
+          <form id="vehicleForm">
+            <div class="mb-3">
+              <input type="text" class="form-control" id="licensePlate" placeholder="Placa" required>
+            </div>
+            <div class="mb-3">
+              <select class="form-select" id="vehicleType">
+                <option value="car">Carro</option>
+                <option value="motorcycle">Motocicleta</option>
+              </select>
+            </div>
+            <button type="submit" class="btn btn-primary">Registrar Vehículo</button>
+          </form>
+  
+          <!-- Tabla para listar vehículos -->
+          <table class="table mt-4" id="vehicleTable">
+            <thead>
+              <tr>
+                <th>Placa</th>
+                <th>Tipo</th>
+                <th>Hora de entrada</th>
+                <th>Acciones</th>
+              </tr>
+            </thead>
+            <tbody>
+              <!-- Las filas de vehículos serán agregadas aquí dinámicamente -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="tab-pane fade" id="profile-tab-pane" role="tabpanel" aria-labelledby="profile-tab" tabindex="0">
+        <!-- Sección para Clientes -->
+        <div class="container mt-4">
+          <h2>Clientes</h2>
+          <form id="customerForm">
+            <div class="mb-3">
+              <input type="text" class="form-control" id="customerName" placeholder="Nombre del cliente" required>
+            </div>
+            <div class="mb-3">
+              <input type="text" class="form-control" id="customerPhone" placeholder="Teléfono del cliente" required>
+            </div>
+            <button type="submit" class="btn btn-info">Añadir Cliente</button>
+          </form>
+  
+          <!-- Tabla para listar clientes -->
+          <table class="table mt-4" id="customerTable">
+            <thead>
+              <tr>
+                <th>Nombre</th>
+                <th>Teléfono</th>
+                <th>Acciones</th>
+              </tr>
+            </thead>
+            <tbody>
+              <!-- Las filas de clientes serán agregadas aquí dinámicamente -->
+            </tbody>
+          </table>
+        </div> 
+      </div>
+      <div class="tab-pane fade" id="contact-tab-pane" role="tabpanel" aria-labelledby="contact-tab" tabindex="0">
+        <!-- Sección para Pagos -->
+        <div class="container mt-4">
+          <h2>Pagos</h2>
+          <form id="paymentForm">
+            <div class="mb-3">
+              <input type="text" class="form-control" id="customerPhone" placeholder="Teléfono cliente" required>
+            </div>
+            <div class="mb-3">
+              <input type="number" class="form-control" id="amount" placeholder="Valor" required>
+            </div>
+            <div class="form-check mb-3">
+              <input type="checkbox" class="form-check-input" id="isMonthlyPayment">
+              <label class="form-check-label" for="isMonthlyPayment">Pago mensual</label>
+            </div>
+            <button type="submit" class="btn btn-success">Procesar el pago</button>
+          </form>
+  
+          <!-- Div para mostrar el historial de pagos -->
+          <div id="paymentHistory" class="mt-4"></div>
+        </div>
+      </div>
+    </div>
+      
+  </div>
+
+  <!-- Enlace al archivo JavaScript que maneja la lógica de la página -->
+  <script src="renderer.js"></script>
+</body>
+</html>
