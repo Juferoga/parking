@@ -42,6 +42,10 @@ electron-parking/
 └── package-lock.json
 ```
 
+## Capturas de pantalla
+
+![Animación Parking](https://github.com/Juferoga/parking/tree/main/assets/parking.gif)
+
 ## Licencia
 
 Este proyecto está licenciado bajo la licencia GPL-V3. Consulta el archivo `LICENSE` para obtener más detalles.
