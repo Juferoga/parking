@@ -44,7 +44,7 @@ electron-parking/
 
 ## Capturas de pantalla
 
-![Animación Parking](https://github.com/Juferoga/parking/tree/main/assets/parking.gif)
+![Animación Parking](https://github.com/Juferoga/parking/blob/main/assets/parking.gif?raw=true)
 
 ## Licencia
 
